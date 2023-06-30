@@ -10,5 +10,18 @@ Human and non-human primates have strikingly similar genomes, but they strongly 
 ### Downstream_data_analysis_of_expression.R
 - Rscripts used to get the expression pattern of differentially expressed orthologous lncRNAs from both and either species.
 
+### Human_DEGs_visualization.R
+- Provides information about the protein-coding genes differentially expressed across any of the brain regions.
+- Extracts the information of variance stabilized read counts, normalized read counts of respective differentially expressed genes.
+- Heatmap and boxplot visualization of the expression of differentially expressed orthologs lncRNAs from both and either of the species.
+
+### Co-expression_calculation.R
+- Calculates the correlation of expression between Human lncRNAs from each cluster's lncRNA and protein-coding genes.
+
+### Correlation_input_preparation_and_plotting.R
+- Prepares the dataframe for getting circular plot showing correlations.
+
+### Plot_statistics_Pos_vs_Neg_co-expressed_Pairs.R
+- Plots the statistics of positively and negatively co-expressed lncRNAs and protein-coding genes.
 
 
