@@ -5,7 +5,7 @@ Human and non-human primates have strikingly similar genomes, but they strongly 
 
 ## **Script Information:**
 ### Command_for_the_lncRNA_predictions.txt:
-- Al the commands for tools used for predicting lncRNAs.
+- All the commands for tools used for predicting lncRNAs.
 
 ### Downstream_data_analysis_of_expression.R
 - Rscripts used to get the expression pattern of differentially expressed orthologous lncRNAs from both and either species.
