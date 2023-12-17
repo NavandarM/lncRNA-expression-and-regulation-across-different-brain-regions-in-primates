@@ -29,7 +29,7 @@ hmmscan --cpu 8 --domtblout <pfam.domtblout> <path/to/Pfam-A.hmm> longest_orfs.p
 TransDecoder-TransDecoder-v5.5.0/TransDecoder.LongOrfs -t required.fasta
 
 # Integrate blast and pfam search to find the coding regions
-TransDecoder.Predict -t required.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6
+TransDecoder-TransDecoder-v5.5.0/TransDecoder.Predict -t required.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6
 
 ### CPAT
 make_hexamer_tab.py  -c organism_cds.random.fa -n organism.ncrna.random.fa > organism_hexamer.tsv
