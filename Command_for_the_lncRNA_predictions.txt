@@ -31,7 +31,6 @@ TransDecoder-TransDecoder-v5.5.0/TransDecoder.LongOrfs -t required.fasta
 # Integrate blast and pfam search to find the coding regions
 TransDecoder.Predict -t required.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6
 
-
 ### CPAT
 make_hexamer_tab.py  -c organism_cds.random.fa -n organism.ncrna.random.fa > organism_hexamer.tsv
 
