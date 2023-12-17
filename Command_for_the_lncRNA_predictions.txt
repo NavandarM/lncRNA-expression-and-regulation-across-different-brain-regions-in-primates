@@ -19,8 +19,18 @@ TransDecoder-TransDecoder-v5.5.0/util/gtf_genome_to_cdna_fasta.pl  <enter gtf fi
 #Prepare gff file from gtf
 TransDecoder-TransDecoder-v5.5.0/util/gtf_to_alignment_gff3.pl <enter gtf file> > <required.gff3>
 
+# blastp
+blastp -query <required.fasta> -db <prot_db> -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -num_threads 4 > blastp.outfmt6
+
+# pfam search using hmmscan
+hmmscan --cpu 8 --domtblout <pfam.domtblout> <path/to/Pfam-A.hmm> longest_orfs.pep
+
 #Run the TransDecoder
-TransDecoder-TransDecoder-v5.5.0/TransDecoder.LongOrfs -t required.fasta 
+TransDecoder-TransDecoder-v5.5.0/TransDecoder.LongOrfs -t required.fasta
+
+# Integrate blast and pfam search to find the coding regions
+TransDecoder.Predict -t required.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6
+
 
 ### CPAT
 make_hexamer_tab.py  -c organism_cds.random.fa -n organism.ncrna.random.fa > organism_hexamer.tsv
